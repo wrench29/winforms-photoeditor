@@ -116,6 +116,7 @@
             MainMenuStrip = menuStrip1;
             Name = "MainWindow";
             Text = "Form1";
+            MdiChildActivate += MainWindow_MdiChildActivate;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
