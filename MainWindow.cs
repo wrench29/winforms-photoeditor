@@ -6,9 +6,11 @@ namespace photoeditor
         {
             InitializeComponent();
         }
-        private void newToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            var photoEditorWindow = new PhotoEditorWindow("me.jpg");
+            photoEditorWindow.MdiParent = this;
+            photoEditorWindow.Show();
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
