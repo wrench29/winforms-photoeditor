@@ -35,5 +35,10 @@ namespace photoeditor
         {
 
         }
+
+        private void infoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
