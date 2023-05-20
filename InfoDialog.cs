@@ -6,9 +6,10 @@
         string Extension,
         int SizePxX,
         int SizePxY,
-        int SizeCmX,
-        int SizeCmY,
-        int Resolution,
+        float SizeCmX,
+        float SizeCmY,
+        float VResolution,
+        float HResolution,
         string PixelsFormat,
         bool HasTransparency,
         int BitsPerPixel
@@ -23,8 +24,8 @@
             path_label.Text = info.Path;
             extension_label.Text = info.Extension;
             size_px_label.Text = $"{info.SizePxX}x{info.SizePxY}";
-            size_cm_label.Text = $"{info.SizeCmX}x{info.SizeCmY}";
-            resolution_label.Text = info.Resolution.ToString();
+            size_cm_label.Text = $"{info.SizeCmX:0.##}x{info.SizeCmY:0.##}";
+            resolution_label.Text = $"Horizontal: {info.HResolution} Vertical: {info.VResolution}";
             pixels_format.Text = info.PixelsFormat;
             has_transparency_label.Text = info.HasTransparency.ToString();
             bits_per_pixel_label.Text = info.BitsPerPixel.ToString();

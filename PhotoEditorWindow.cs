@@ -15,8 +15,10 @@
                     bitmap = value;
                     Refresh();
                 }
-            } 
+            }
         }
+
+        public string? ImagePath { get; set; }
 
         public bool IsChanged { get; set; } = false;
 
