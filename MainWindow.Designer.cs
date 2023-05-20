@@ -37,13 +37,16 @@
             infoToolStripMenuItem = new ToolStripMenuItem();
             closeToolStripMenuItem = new ToolStripMenuItem();
             exitToolStripMenuItem = new ToolStripMenuItem();
+            toolsToolStripMenuItem = new ToolStripMenuItem();
+            impixelToolStripMenuItem = new ToolStripMenuItem();
+            binarizeToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, toolsToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 28);
@@ -106,6 +109,27 @@
             exitToolStripMenuItem.Text = "Exit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
+            // toolsToolStripMenuItem
+            // 
+            toolsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { impixelToolStripMenuItem, binarizeToolStripMenuItem });
+            toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            toolsToolStripMenuItem.Size = new Size(58, 24);
+            toolsToolStripMenuItem.Text = "Tools";
+            // 
+            // impixelToolStripMenuItem
+            // 
+            impixelToolStripMenuItem.Name = "impixelToolStripMenuItem";
+            impixelToolStripMenuItem.Size = new Size(145, 26);
+            impixelToolStripMenuItem.Text = "Impixel";
+            impixelToolStripMenuItem.Click += impixelToolStripMenuItem_Click;
+            // 
+            // binarizeToolStripMenuItem
+            // 
+            binarizeToolStripMenuItem.Name = "binarizeToolStripMenuItem";
+            binarizeToolStripMenuItem.Size = new Size(145, 26);
+            binarizeToolStripMenuItem.Text = "Binarize";
+            binarizeToolStripMenuItem.Click += binarizeToolStripMenuItem_Click;
+            // 
             // MainWindow
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -134,5 +158,8 @@
         private ToolStripMenuItem closeToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem;
         private ToolStripMenuItem infoToolStripMenuItem;
+        private ToolStripMenuItem toolsToolStripMenuItem;
+        private ToolStripMenuItem impixelToolStripMenuItem;
+        private ToolStripMenuItem binarizeToolStripMenuItem;
     }
 }

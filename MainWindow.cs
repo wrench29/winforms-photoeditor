@@ -5,6 +5,7 @@ namespace photoeditor
         private const string fileTypesFilter = "Image files(*.bmp;*.jpg;*.png;*.gif;" +
             "*.tiff)|*.bmp;*.jpg;*.png;*.gif;*.tiff";
 
+
         public MainWindow()
         {
             InitializeComponent();
@@ -13,6 +14,8 @@ namespace photoeditor
             saveAsToolStripMenuItem.Enabled = false;
             closeToolStripMenuItem.Enabled = false;
             infoToolStripMenuItem.Enabled = false;
+            impixelToolStripMenuItem.Enabled = false;
+            binarizeToolStripMenuItem.Enabled = false;
         }
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -151,6 +154,7 @@ namespace photoeditor
             {
                 child.ImageBitmap = bitmap;
                 child.ImagePath = imagePath;
+                updateState();
                 return;
             }
 
@@ -162,12 +166,32 @@ namespace photoeditor
 
         private void MainWindow_MdiChildActivate(object sender, EventArgs e)
         {
-            var isThereChildren = ActiveMdiChild == null;
-            
-            saveToolStripMenuItem.Enabled = !isThereChildren;
-            saveAsToolStripMenuItem.Enabled = !isThereChildren;
-            closeToolStripMenuItem.Enabled = !isThereChildren;
-            infoToolStripMenuItem.Enabled = !isThereChildren;
+            updateState();
+        }
+
+        private void updateState()
+        {
+            var isThereChildren =
+                ActiveMdiChild != null &&
+                ((PhotoEditorWindow)ActiveMdiChild).ImageBitmap != null;
+
+            saveToolStripMenuItem.Enabled = isThereChildren;
+            saveAsToolStripMenuItem.Enabled = isThereChildren;
+            closeToolStripMenuItem.Enabled = isThereChildren;
+            infoToolStripMenuItem.Enabled = isThereChildren;
+            impixelToolStripMenuItem.Enabled = isThereChildren;
+            binarizeToolStripMenuItem.Enabled = isThereChildren;
+        }
+
+        private void impixelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var child = (PhotoEditorWindow)ActiveMdiChild!;
+            child.Impixel();
+        }
+
+        private void binarizeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
