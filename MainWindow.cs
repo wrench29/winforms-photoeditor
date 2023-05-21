@@ -191,7 +191,42 @@ namespace photoeditor
 
         private void binarizeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            var child = (PhotoEditorWindow)ActiveMdiChild!;
+            var bitmap = child.ImageBitmap!;
 
+            var binarizeDialog = new BinarizeDialog();
+            binarizeDialog.ShowDialog();
+            var threshold = binarizeDialog.Threshold;
+
+            var outputImage = im2bw(bitmap, threshold);
+
+            var photoEditorWindow = new PhotoEditorWindow(outputImage);
+            photoEditorWindow.MdiParent = this;
+            photoEditorWindow.Show();
+        }
+
+        private Bitmap im2bw(Bitmap src, double threshold)
+        {
+            var output = new Bitmap(src.Width, src.Height);
+
+            for (int x = 0; x < src.Width; x++)
+            {
+                for (int y = 0; y < src.Height; y++)
+                {
+                    YIQ color = ColorOperations.RGBtoYIQ(src.GetPixel(x, y));
+
+                    Color outputColor = Color.Black;
+
+                    if (color.Y >= threshold)
+                    {
+                        outputColor = Color.White;
+                    }
+
+                    output.SetPixel(x, y, outputColor);
+                }
+            }
+
+            return output;
         }
     }
 }
