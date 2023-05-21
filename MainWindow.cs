@@ -123,6 +123,7 @@ namespace photoeditor
                 if (window.ImagePath != null)
                 {
                     window.ImageBitmap!.Save(window.ImagePath);
+                    window.IsChanged = false;
                     return;
                 }
                 saveAs(window);
@@ -139,6 +140,7 @@ namespace photoeditor
             {
                 var bitmap = window.ImageBitmap;
                 bitmap!.Save(saveFileDialog.FileName);
+                window.IsChanged = false;
                 return saveFileDialog.FileName;
             }
             return null;
