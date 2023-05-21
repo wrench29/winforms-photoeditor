@@ -15,7 +15,7 @@ namespace photoeditor
                 if (value != null)
                 {
                     Width = value.Width + 18;
-                    Height = value.Height + 47;
+                    Height = value.Height + 69;
                     bitmap = value;
                     Refresh();
                 }
@@ -54,6 +54,11 @@ namespace photoeditor
                     var crossStartPoint = new Point(endPoint.Value.X, startPoint.Value.Y);
                     var crossEndPoint = new Point(startPoint.Value.X, endPoint.Value.Y);
                     e.Graphics.DrawLine(pen, crossStartPoint, crossEndPoint);
+
+                    e.Graphics.DrawLine(pen, (Point)startPoint!, crossStartPoint);
+                    e.Graphics.DrawLine(pen, crossStartPoint, (Point)endPoint!);
+                    e.Graphics.DrawLine(pen, (Point)endPoint!, crossEndPoint);
+                    e.Graphics.DrawLine(pen, crossEndPoint, (Point)startPoint!);
                 }
             }
         }

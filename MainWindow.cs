@@ -195,19 +195,20 @@ namespace photoeditor
             var bitmap = child.ImageBitmap!;
 
             var binarizeDialog = new BinarizeDialog();
-            binarizeDialog.ShowDialog();
+            if (binarizeDialog.ShowDialog() != DialogResult.OK) return;
+
             var threshold = binarizeDialog.Threshold;
 
-            var outputImage = im2bw(bitmap, threshold);
+            im2bw(bitmap, out var outputImage, threshold);
 
             var photoEditorWindow = new PhotoEditorWindow(outputImage);
             photoEditorWindow.MdiParent = this;
             photoEditorWindow.Show();
         }
 
-        private Bitmap im2bw(Bitmap src, double threshold)
+        private void im2bw(Bitmap src, out Bitmap output, double threshold)
         {
-            var output = new Bitmap(src.Width, src.Height);
+            output = new Bitmap(src.Width, src.Height);
 
             for (int x = 0; x < src.Width; x++)
             {
@@ -225,8 +226,6 @@ namespace photoeditor
                     output.SetPixel(x, y, outputColor);
                 }
             }
-
-            return output;
         }
     }
 }
