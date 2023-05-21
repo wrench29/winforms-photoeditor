@@ -60,7 +60,7 @@ namespace photoeditor
             var child = (PhotoEditorWindow)ActiveMdiChild;
             if (child.IsChanged)
             {
-                askForSave(child);
+                AskForSave(child);
             }
             child.Close();
         }
@@ -73,7 +73,7 @@ namespace photoeditor
 
                 if (((PhotoEditorWindow)child).IsChanged)
                 {
-                    askForSave((PhotoEditorWindow)child);
+                    AskForSave((PhotoEditorWindow)child);
                 }
             }
 
@@ -109,7 +109,7 @@ namespace photoeditor
             infoForm.Show();
         }
 
-        private void askForSave(PhotoEditorWindow window)
+        public void AskForSave(PhotoEditorWindow window)
         {
             var res = MessageBox.Show(
                 "Do you want to save?",

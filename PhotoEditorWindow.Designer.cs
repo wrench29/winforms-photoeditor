@@ -37,16 +37,16 @@
             // 
             statusStrip1.ImageScalingSize = new Size(20, 20);
             statusStrip1.Items.AddRange(new ToolStripItem[] { status_bar_label });
-            statusStrip1.Location = new Point(0, 426);
+            statusStrip1.Location = new Point(0, 428);
             statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(800, 24);
+            statusStrip1.Size = new Size(800, 22);
             statusStrip1.TabIndex = 0;
             statusStrip1.Text = "statusStrip1";
             // 
             // status_bar_label
             // 
             status_bar_label.Name = "status_bar_label";
-            status_bar_label.Size = new Size(0, 18);
+            status_bar_label.Size = new Size(0, 16);
             // 
             // PhotoEditorWindow
             // 
@@ -56,6 +56,7 @@
             Controls.Add(statusStrip1);
             Name = "PhotoEditorWindow";
             Text = "PhotoEditorWindow";
+            FormClosing += PhotoEditorWindow_FormClosing;
             Paint += PhotoEditorWindow_Paint;
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();

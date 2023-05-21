@@ -175,5 +175,13 @@ namespace photoeditor
 
             return colors;
         }
+
+        private void PhotoEditorWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (IsChanged)
+            {
+                ((MainWindow)MdiParent).AskForSave(this);
+            }
+        }
     }
 }
