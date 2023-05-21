@@ -203,6 +203,7 @@ namespace photoeditor
 
             var photoEditorWindow = new PhotoEditorWindow(outputImage);
             photoEditorWindow.MdiParent = this;
+            photoEditorWindow.IsChanged = true;
             photoEditorWindow.Show();
         }
 
