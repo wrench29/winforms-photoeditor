@@ -74,7 +74,7 @@
             Controls.Add(threshold_numeric);
             Controls.Add(label1);
             Name = "BinarizeDialog";
-            Text = "BinarizeDialog";
+            Text = "Binarize";
             ((System.ComponentModel.ISupportInitialize)threshold_numeric).EndInit();
             ResumeLayout(false);
             PerformLayout();

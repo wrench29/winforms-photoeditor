@@ -55,7 +55,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(statusStrip1);
             Name = "PhotoEditorWindow";
-            Text = "PhotoEditorWindow";
+            Text = "Photo";
             FormClosing += PhotoEditorWindow_FormClosing;
             Paint += PhotoEditorWindow_Paint;
             statusStrip1.ResumeLayout(false);

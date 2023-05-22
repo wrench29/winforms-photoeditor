@@ -6,10 +6,6 @@ using System.Threading.Tasks;
 
 namespace photoeditor
 {
-    public record class RGBf(float R, float G, float B);
-    public record class RGBi(int R, int G, int B);
-    public record class YIQ(float Y, float I, float Q);
-
     public static class ColorOperations
     {
         public static RGBf ColorToRGBf(Color color)
@@ -49,5 +45,9 @@ namespace photoeditor
 
             return RGBfToRGB(new RGBf(r, g, b));
         }
+
+        public record class RGBf(float R, float G, float B);
+        public record class RGBi(int R, int G, int B);
+        public record class YIQ(float Y, float I, float Q);
     }
 }

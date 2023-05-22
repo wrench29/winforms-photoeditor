@@ -40,15 +40,15 @@ namespace photoeditor
             label8 = new Label();
             label9 = new Label();
             groupBox1 = new GroupBox();
-            resolution_label = new Label();
-            size_px_label = new Label();
-            size_cm_label = new Label();
-            extension_label = new Label();
-            path_label = new Label();
-            filename_label = new Label();
-            pixels_format = new Label();
-            has_transparency_label = new Label();
             bits_per_pixel_label = new Label();
+            has_transparency_label = new Label();
+            pixels_format = new Label();
+            filename_label = new Label();
+            path_label = new Label();
+            extension_label = new Label();
+            size_cm_label = new Label();
+            size_px_label = new Label();
+            resolution_label = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -161,61 +161,13 @@ namespace photoeditor
             groupBox1.TabStop = false;
             groupBox1.Text = "Properties";
             // 
-            // resolution_label
+            // bits_per_pixel_label
             // 
-            resolution_label.AutoSize = true;
-            resolution_label.Location = new Point(150, 123);
-            resolution_label.Name = "resolution_label";
-            resolution_label.Size = new Size(0, 20);
-            resolution_label.TabIndex = 9;
-            // 
-            // size_px_label
-            // 
-            size_px_label.AutoSize = true;
-            size_px_label.Location = new Point(150, 83);
-            size_px_label.Name = "size_px_label";
-            size_px_label.Size = new Size(0, 20);
-            size_px_label.TabIndex = 10;
-            // 
-            // size_cm_label
-            // 
-            size_cm_label.AutoSize = true;
-            size_cm_label.Location = new Point(150, 103);
-            size_cm_label.Name = "size_cm_label";
-            size_cm_label.Size = new Size(0, 20);
-            size_cm_label.TabIndex = 11;
-            // 
-            // extension_label
-            // 
-            extension_label.AutoSize = true;
-            extension_label.Location = new Point(150, 63);
-            extension_label.Name = "extension_label";
-            extension_label.Size = new Size(0, 20);
-            extension_label.TabIndex = 12;
-            // 
-            // path_label
-            // 
-            path_label.AutoSize = true;
-            path_label.Location = new Point(150, 43);
-            path_label.Name = "path_label";
-            path_label.Size = new Size(0, 20);
-            path_label.TabIndex = 13;
-            // 
-            // filename_label
-            // 
-            filename_label.AutoSize = true;
-            filename_label.Location = new Point(150, 23);
-            filename_label.Name = "filename_label";
-            filename_label.Size = new Size(0, 20);
-            filename_label.TabIndex = 14;
-            // 
-            // pixels_format
-            // 
-            pixels_format.AutoSize = true;
-            pixels_format.Location = new Point(150, 143);
-            pixels_format.Name = "pi";
-            pixels_format.Size = new Size(0, 20);
-            pixels_format.TabIndex = 15;
+            bits_per_pixel_label.AutoSize = true;
+            bits_per_pixel_label.Location = new Point(150, 183);
+            bits_per_pixel_label.Name = "bits_per_pixel_label";
+            bits_per_pixel_label.Size = new Size(0, 20);
+            bits_per_pixel_label.TabIndex = 17;
             // 
             // has_transparency_label
             // 
@@ -225,13 +177,61 @@ namespace photoeditor
             has_transparency_label.Size = new Size(0, 20);
             has_transparency_label.TabIndex = 16;
             // 
-            // bits_per_pixel_label
+            // pixels_format
             // 
-            bits_per_pixel_label.AutoSize = true;
-            bits_per_pixel_label.Location = new Point(150, 183);
-            bits_per_pixel_label.Name = "bits_per_pixel_label";
-            bits_per_pixel_label.Size = new Size(0, 20);
-            bits_per_pixel_label.TabIndex = 17;
+            pixels_format.AutoSize = true;
+            pixels_format.Location = new Point(150, 143);
+            pixels_format.Name = "pixels_format";
+            pixels_format.Size = new Size(0, 20);
+            pixels_format.TabIndex = 15;
+            // 
+            // filename_label
+            // 
+            filename_label.AutoSize = true;
+            filename_label.Location = new Point(150, 23);
+            filename_label.Name = "filename_label";
+            filename_label.Size = new Size(0, 20);
+            filename_label.TabIndex = 14;
+            // 
+            // path_label
+            // 
+            path_label.AutoSize = true;
+            path_label.Location = new Point(150, 43);
+            path_label.Name = "path_label";
+            path_label.Size = new Size(0, 20);
+            path_label.TabIndex = 13;
+            // 
+            // extension_label
+            // 
+            extension_label.AutoSize = true;
+            extension_label.Location = new Point(150, 63);
+            extension_label.Name = "extension_label";
+            extension_label.Size = new Size(0, 20);
+            extension_label.TabIndex = 12;
+            // 
+            // size_cm_label
+            // 
+            size_cm_label.AutoSize = true;
+            size_cm_label.Location = new Point(150, 103);
+            size_cm_label.Name = "size_cm_label";
+            size_cm_label.Size = new Size(0, 20);
+            size_cm_label.TabIndex = 11;
+            // 
+            // size_px_label
+            // 
+            size_px_label.AutoSize = true;
+            size_px_label.Location = new Point(150, 83);
+            size_px_label.Name = "size_px_label";
+            size_px_label.Size = new Size(0, 20);
+            size_px_label.TabIndex = 10;
+            // 
+            // resolution_label
+            // 
+            resolution_label.AutoSize = true;
+            resolution_label.Location = new Point(150, 123);
+            resolution_label.Name = "resolution_label";
+            resolution_label.Size = new Size(0, 20);
+            resolution_label.TabIndex = 9;
             // 
             // InfoDialog
             // 
@@ -240,7 +240,7 @@ namespace photoeditor
             ClientSize = new Size(684, 363);
             Controls.Add(groupBox1);
             Name = "InfoDialog";
-            Text = "InfoDialog";
+            Text = "Info about image";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);

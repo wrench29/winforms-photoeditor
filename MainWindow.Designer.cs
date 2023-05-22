@@ -139,7 +139,7 @@
             IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
             Name = "MainWindow";
-            Text = "Form1";
+            Text = "Photo Editor";
             MdiChildActivate += MainWindow_MdiChildActivate;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();

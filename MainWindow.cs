@@ -217,7 +217,7 @@ namespace photoeditor
             {
                 for (int y = 0; y < src.Height; y++)
                 {
-                    YIQ color = ColorOperations.RGBtoYIQ(src.GetPixel(x, y));
+                    ColorOperations.YIQ color = ColorOperations.RGBtoYIQ(src.GetPixel(x, y));
 
                     Color outputColor = Color.Black;
 
